@@ -13,7 +13,6 @@
     --CORNFLOWER: #E7E9FC;
     --OCEAN: #404BBF;
     --WHITE: #FFFFFF;
-    --
     --ROBOTO: 'Roboto';
     --RALEWAY: 'Raleway';
 }
@@ -54,30 +53,32 @@ img{
     padding: 0 15px;
 }
 
+.footer .container{
+    display: flex;
+    align-items: baseline;
+}
+
 /******************************** MENU ********************************/
 
 .menu-toggle {
     min-height: 40px;
-    min-width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-  
     margin: 0;
     padding: 0;
     background-color: transparent;
     cursor: pointer;
     border: none;
-    border-radius: 50%;
     outline: none;
 }
 
-.menu-toggle:hover,
-  .menu-toggle:focus {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
+.menu-toggle:hover .mobile-menu-icon,
+.menu-toggle:focus .mobile-menu-icon{
+    fill: #404BBF;
+}
   
-  .menu-container {
+.menu-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -86,29 +87,28 @@ img{
     padding: 32px;
     background-color: #3f51b5;
     z-index: 999;
-  
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
-  }
+}
   
-  .menu-container.is-open {
+.menu-container.is-open {
     transform: translateX(0);
-  }
+}
   
-  .menu-container .menu-toggle {
+.menu-container .menu-toggle {
     position: absolute;
     top: 16px;
     right: 16px;
     color: #fff;
-  }
+}
   
-  .mobile-menu {
+.mobile-menu {
     padding: 0;
     margin: 0;
     list-style: none;
-  }
+}
   
-  .mobile-menu .link {
+.mobile-menu .link {
     display: block;
     padding: 10px;
     color: #fff;
@@ -118,21 +118,52 @@ img{
 /******************************* RESPONSIVE ******************************/
 
 @media (max-width: 479px) {
-    .menu {display: none;}
+    
 }
 @media (min-width: 480px) {
+
+}
+@media (max-width: 767px) {
+    .menu {display: none;}
+}
+@media (min-width: 768px) {
     .menu-toggle {display: none;}
-    
+}
+@media (max-width: 1200px) {
+    .navbar{
+        min-height: 72px;
+    }
+    .menu .menu-contact{
+        display: block;
+        font-size: 12px;
+    }
+    .footer .container > div{
+        display: list-item;
+        list-style: none;
+    }
+    .footer .container{
+        flex-wrap:wrap
+    }
 }
   
 @media (min-width: 480px) and (max-width: 767px) {
     body{background-color: rgba(0, 0, 0, 0.15);}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
+    body{background-color: rgba(0, 0, 0, 0.15);}
+    .container{
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 1200px) {
     body{background-color: rgba(0, 0, 0, 0.3);}
     .container{
         max-width: 1158px;
+        margin: 0 auto;
         padding: 0 15px;
     }
 }
@@ -170,7 +201,7 @@ img{
 .logo-header,
 .logo-footer{
     color: var(--IRIS);
-    font-family: var(--RALEWAY), sans-serif;;
+    font-family: var(--RALEWAY), sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 1.17;
@@ -182,15 +213,14 @@ img{
 .logo-header .logo-color{color: var(--NAVY-BLUE);}
 .logo-footer .logo-color{color: var(--CLOUD);}
 .header .link-nav{
+    position: relative;
     display: inline-block;
     color: var(--NAVY-BLUE);
     font-weight: 500;
     letter-spacing: 0.02em;
     padding: 24px 0;
 }
-.header .link-nav{
-    position: relative;
-}
+
 .header .link-active{
     color: var(--OCEAN);
 }
@@ -220,10 +250,7 @@ img{
     color: var(--CLOUD);
     padding: 100px 0;
 }
-.footer .container{
-    display: flex;
-    align-items: baseline;
-}
+
 .footer-desc{
     max-width: 264px;
 }
@@ -338,7 +365,11 @@ img{
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .studio-section-first .button:hover,
-.studio-section-first .button:focus{
+.studio-section-first .button:focus,
+.modal-layer .modal-form-send:hover,
+.modal-layer .modal-form-send:focus,
+.footer .subscription-button:hover,
+.footer .subscription-button:focus{
     background-color: var(--OCEAN);
 }
 
@@ -583,7 +614,7 @@ img{
     gap: 24px;
 }
 .subscription-form-input::placeholder{
-    color #ffffff;
+    color: #ffffff;
 }
 .subscription-button{
     min-width: 165px;
