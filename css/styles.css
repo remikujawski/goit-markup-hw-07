@@ -133,6 +133,12 @@ img{
     margin-bottom: 72px;
 }
 
+.list-item-sp .card-image > img{
+    object-fit: cover;
+    width: 100%;
+    height: auto;    
+}
+
 /******************************** MENU ********************************/
 
 .menu-toggle {
