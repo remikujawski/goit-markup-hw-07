@@ -298,15 +298,6 @@ img{
     .studio-section-socond{
         margin-bottom: 0;
     }
-}
-
-@media (min-width: 480px) and (max-width: 1199px) {
-    .subscription{
-        margin-top: 72px;
-    }
-    .studio-section-third .container{
-        padding: 0 100px;
-    }
     .studio-section-socond .list-item-ss{
         width: 356px;
     }
@@ -320,6 +311,15 @@ img{
         line-height: 40px; /* 111.111% */
         letter-spacing: 0.72px;
         text-transform: capitalize;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 1199px) {
+    .subscription{
+        margin-top: 72px;
+    }
+    .studio-section-third .container{
+        padding: 0 100px;
     }
 
     .studio-section-fifth .customer-item{
