@@ -58,6 +58,58 @@ img{
     align-items: baseline;
 }
 
+.social-info{
+    margin-right: 80px;
+}
+.footer .company-info{
+    margin-right: 120px;
+}
+
+.footer-desc{
+    max-width: 264px;
+}
+
+.subscription-form{
+    display: flex;
+    gap: 24px;
+}
+.subscription-form-label{
+    display: inline-flex;
+}
+.subscription-form-input{
+    display: flex;
+    width: 264px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: #ffffff;
+    gap: 24px;
+}
+
+.subscription-button{
+    min-width: 165px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #4D5AE5;
+    border: none;
+    border-radius: 4px;
+}
+
 /******************************** MENU ********************************/
 
 .menu-toggle {
@@ -125,11 +177,41 @@ img{
 }
 @media (max-width: 767px) {
     .menu {display: none;}
+    .footer .company-info{
+        padding-bottom: 72px;
+    }
+    .footer .company-info,
+    .social-info,
+    .subscription{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .footer .container{
+        text-align: center;
+        align-items: center;
+    }
+    .footer-desc{
+        max-width: 100%;
+    }
+    .subscription-form{
+        display: block;
+    }
+    .footer .subscription-form-input{
+        width: 100%;
+    }
+    .subscription-form-label{
+        display: block;
+    }
+    .subscription-button{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 16px;
+    }
 }
 @media (min-width: 768px) {
     .menu-toggle {display: none;}
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
     .navbar{
         min-height: 72px;
     }
@@ -142,10 +224,22 @@ img{
         list-style: none;
     }
     .footer .container{
-        flex-wrap:wrap
+        flex-wrap:wrap;
+    }
+    .social-info{
+        margin-right: 0;
     }
 }
-  
+
+@media (min-width: 480px) and (max-width: 1199px) {
+    .subscription{
+        margin-top: 72px;
+    }
+    .container{
+        padding: 0 100px;
+    }
+}
+
 @media (min-width: 480px) and (max-width: 767px) {
     body{background-color: rgba(0, 0, 0, 0.15);}
 }
@@ -153,9 +247,8 @@ img{
 @media (min-width: 768px) and (max-width: 1199px) {
     body{background-color: rgba(0, 0, 0, 0.15);}
     .container{
-        max-width: 920px;
-        margin: 0 auto;
-        padding: 0 15px;
+        max-width: 768px;
+        padding: 0 50px;
     }
 }
 
@@ -163,8 +256,6 @@ img{
     body{background-color: rgba(0, 0, 0, 0.3);}
     .container{
         max-width: 1158px;
-        margin: 0 auto;
-        padding: 0 15px;
     }
 }
 
@@ -251,9 +342,9 @@ img{
     padding: 100px 0;
 }
 
-.footer-desc{
+/* .footer-desc{
     max-width: 264px;
-}
+} */
 
 .footer p.footer-social-desc{
     font-weight: 500;
@@ -272,10 +363,6 @@ img{
 .footer .social-icon{
     width: 40px;
     height: 40px;
-}
-
-.footer .company-info{
-    margin-right: 120px;
 }
 
 .footer a.social-link:hover,
@@ -587,18 +674,14 @@ img{
 
 /******************************** SUBSCRIBTION ********************************/
 
-.social-info{
-    padding-right: 80px;
-}
-
-.subscription-form{
+/* .subscription-form{
     display: flex;
     gap: 24px;
-}
-.subscription-form-label{
+} */
+/* .subscription-form-label{
     display: inline-flex;
-}
-.subscription-form-input{
+} */
+/* .subscription-form-input{
     display: flex;
     width: 264px;
     height: 40px;
@@ -612,11 +695,11 @@ img{
     border-radius: 4px;
     color: #ffffff;
     gap: 24px;
-}
+} */
 .subscription-form-input::placeholder{
     color: #ffffff;
 }
-.subscription-button{
+/* .subscription-button{
     min-width: 165px;
     height: 40px;
     display: flex;
@@ -632,7 +715,7 @@ img{
     background-color: #4D5AE5;
     border: none;
     border-radius: 4px;
-}
+} */
 .subscription-button-icon{
     margin-left: 16px;
     fill: var(--WHITE);
