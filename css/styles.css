@@ -311,9 +311,6 @@ img{
         width: 190px;
         height: 88px;
     }
-    .studio-section-socond .list-item-ss{
-        text-align: center;
-    }
     .studio-section-socond .card-list{
         gap: 72px;
     }
@@ -338,6 +335,9 @@ img{
 
 }
 @media (max-width: 767px) {
+    .studio-section-socond .list-item-ss{
+        text-align: center;
+    }
     .menu {display: none;}
     .footer .company-info{
         padding-bottom: 72px;
